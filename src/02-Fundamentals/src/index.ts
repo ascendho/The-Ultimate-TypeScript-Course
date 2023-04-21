@@ -43,4 +43,37 @@ let mySize = Size.Medium;
 
 console.log(mySize);
 
+// Functions
+
+function calculateTax(income: number, taxYear = 2022): number {
+    if (taxYear < 2022)
+        return income * 1.2;
+
+    return 1.3 * income;
+}
+
+calculateTax(10_000);
+
+
+// Objects
+
+let employee: {
+
+        // id can't be overwritten
+        readonly id: number,
+        name: string,
+
+        // method
+        retire: (date: Date) => void
+
+    } = {
+        id: 1,
+        name: 'Mosh',
+        retire: (date: Date) => {
+            console.log(date);
+        }
+    }
+;
+
+
 
