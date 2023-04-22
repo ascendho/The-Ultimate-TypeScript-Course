@@ -1,4 +1,4 @@
-// Type Aliases
+/* Type Aliases */
 
 type Employee = {
     readonly id: number,
@@ -14,7 +14,7 @@ let employee: Employee = {
     }
 }
 
-// Union Types
+/* Union Types */
 
 function kgToLbs(weight: number | string): number {
     // Narrowing
@@ -24,7 +24,7 @@ function kgToLbs(weight: number | string): number {
 
 }
 
-// Intersection Types
+/* Intersection Types */
 
 type Draggable = {
     drag: () => void
@@ -43,14 +43,14 @@ let textBox: UIWidget = {
     }
 }
 
-// Literal Types
+/* Literal Types */
 
 type Quantity = 50 | 100;
 let quantity: Quantity = 100;
 
 type Metric = 'cm' | 'inch';
 
-// Nullable Types
+/* Nullable Types */
 
 function greet(name: string | null | undefined) {
     if (name)
@@ -61,15 +61,69 @@ function greet(name: string | null | undefined) {
 
 greet(undefined);
 
+/* Optional Chaining */
+type Customer = {
+    birthday?: Date,
+};
 
+function getCustomer(id: number): Customer | null | undefined {
+    return id === 0 ? null : {birthday: new Date()};
+}
 
+let customer = getCustomer(1);
+// Optional property access operator
+console.log(customer?.birthday?.getFullYear());
 
+// Optional element access operator
+// customers?.[0]
 
+// Optional call
+let log: any = null;
+log?.('a');
 
+/* Nullish Coalescing Operating */
 
+let speed: number | null = null;
+let ride = {
+    //  Falsy (undefined, null, '', false, 0)
+    //  Nullish coalescing operator
+    //  if speed is not null or undefined
+    speed: speed ?? 30
+}
 
+/* Type Assertions */
 
+// let phone = document.getElementById('phone') as HTMLInputElement;
+// let phone = <HTMLInputElement>document.getElementById('phone');
 
+// console.log(phone.value);
 
+/* The unknown Type */
 
+function render(document: unknown) {
+    // Narrowing
+    if (typeof document === 'string')
+        console.log(document.toUpperCase());
 
+    if (document instanceof Function)
+        console.log(document.name);
+
+}
+
+/* The never Type */
+
+// use never return type to avoid unreachable code
+function reject(message: string): never {
+    throw new Error(message);
+}
+
+function processEvents(): never {
+    while (true) {
+        // Read a message from a queue
+    }
+}
+
+processEvents();
+
+// below will be unreachable
+// console.log('Hello World');
