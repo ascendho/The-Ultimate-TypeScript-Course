@@ -15,6 +15,7 @@ This repo holds code, exercises and summaries from <a href="https://codewithmosh
 - [x] <a href="src/01 - Getting Started with TypeScript">01 - Getting Started with TypeScript</a>
 - [x] <a href="src/02 - Fundamentals">02 - Fundamentals</a>
 - [x] <a href="src/03 - Advanced Types">03 - Advanced Types</a>
+- [ ] <a href="src/04 - Classes, Interfaces and Object-oriented Programming">04 - Classes, Interfaces and Object-oriented Programming</a>
 
 
 
