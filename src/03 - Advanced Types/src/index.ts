@@ -56,12 +56,13 @@ function greet(name: string | null | undefined) {
     if (name)
         console.log(name.toUpperCase());
     else
-        console.log('Hola');
+        console.log('Hole');
 }
 
 greet(undefined);
 
 /* Optional Chaining */
+
 type Customer = {
     birthday?: Date,
 };
@@ -123,7 +124,36 @@ function processEvents(): never {
     }
 }
 
-processEvents();
+// processEvents();
+
 
 // below will be unreachable
 // console.log('Hello World');
+
+
+/* Exercise */
+
+// 1
+
+type User = {
+    name: string,
+    age: number,
+    occupation?: string
+}
+
+// 2
+
+type Bird = {
+    fly: () => void
+}
+
+type Fish = {
+    swim: () => void
+}
+
+type Pet = Bird | Fish;
+
+
+// 3
+
+type DayOfWeek = 'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | 'Saturday' | 'Sunday';

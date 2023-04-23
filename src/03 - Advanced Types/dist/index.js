@@ -23,7 +23,7 @@ function greet(name) {
     if (name)
         console.log(name.toUpperCase());
     else
-        console.log('Hola');
+        console.log('Hole');
 }
 greet(undefined);
 function getCustomer(id) {
@@ -50,5 +50,4 @@ function processEvents() {
     while (true) {
     }
 }
-processEvents();
 //# sourceMappingURL=index.js.map
