@@ -43,4 +43,73 @@ ride1.start();
 let ride2 = new Ride();
 ride2.start();
 console.log(Ride.activeRides);
+class Person {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    get fullName() {
+        return this.firstName + ' ' + this.lastName;
+    }
+    walk() {
+        console.log('Walking');
+    }
+}
+class Student extends Person {
+    constructor(firstName, lastName, studentId) {
+        super(firstName, lastName);
+        this.studentId = studentId;
+    }
+    takeTest() {
+        console.log('Taking a test');
+    }
+}
+class Teacher extends Person {
+    get fullName() {
+        return 'Professor ' + super.fullName;
+    }
+}
+class Principal extends Person {
+    get fullName() {
+        return 'Principal ' + super.fullName;
+    }
+}
+let student = new Student('Mosh', 'Hamedani', '1');
+console.log(student);
+let teacher = new Teacher('John', 'Smith');
+console.log(teacher.fullName);
+function printNames(people) {
+    for (let person of people)
+        console.log(person.fullName);
+}
+printNames([
+    new Student('Mosh', 'Hamedani', '1'),
+    new Teacher('John', 'Smith'),
+    new Principal('Mary', 'Smith')
+]);
+class Shape {
+    constructor(color) {
+        this.color = color;
+    }
+}
+class Circle extends Shape {
+    constructor(radius, color) {
+        super(color);
+        this.radius = radius;
+    }
+    render() {
+        console.log('Rednering a circle');
+    }
+}
+let circle = new Circle(3, 'blue');
+circle.render();
+class GoogleCalendar {
+    constructor(name) {
+        this.name = name;
+    }
+    addEvent() {
+    }
+    removeEvent() {
+    }
+}
 //# sourceMappingURL=index.js.map
