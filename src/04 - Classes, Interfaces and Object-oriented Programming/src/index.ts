@@ -201,3 +201,57 @@ class GoogleCalendar implements Calendar {
     }
 
 }
+
+/* Exercises */
+
+// 1
+
+class Logger {
+    constructor(public logFile: string) {
+    }
+
+    log(message: string) {
+        console.log(message);
+    }
+}
+
+// 2
+
+class Person2 {
+    constructor(public firstName: string, public lastName: string) {
+    }
+
+    get fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+
+// 3
+
+class Employee extends Person {
+    constructor(
+        firstName: string,
+        lastName: string,
+        public salary: number) {
+        super(firstName, lastName);
+    }
+}
+
+// 4
+
+// What is the difference between private and protected members
+// Private members are not inherited by child classes.
+
+// 5
+
+interface Address {
+    street: string;
+    city: string;
+    zipCode: number;
+}
+
+interface Employee {
+    name: string;
+    salary: number;
+    address: Address;
+}

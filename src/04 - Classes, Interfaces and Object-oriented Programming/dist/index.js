@@ -112,4 +112,27 @@ class GoogleCalendar {
     removeEvent() {
     }
 }
+class Logger {
+    constructor(logFile) {
+        this.logFile = logFile;
+    }
+    log(message) {
+        console.log(message);
+    }
+}
+class Person2 {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    get fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+class Employee extends Person {
+    constructor(firstName, lastName, salary) {
+        super(firstName, lastName);
+        this.salary = salary;
+    }
+}
 //# sourceMappingURL=index.js.map
