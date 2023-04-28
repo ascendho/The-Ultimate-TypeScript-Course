@@ -41,14 +41,15 @@ class Store {
     add(obj) {
         this._objects.push(obj);
     }
-}
-class CompressibleStore extends Store {
-    compress() {
+    find(property, value) {
+        return this._objects.find(obj => obj[property] === value);
     }
 }
-class SearchableStore extends Store {
-    find(name) {
-        return this._objects.find(obj => obj.name === name);
+let store = new Store();
+store.add({ name: 'a', price: 1, title: 'bread' });
+store.find('name', 'a');
+class CompressibleStore extends Store {
+    compress() {
     }
 }
 class ProductStore extends Store {

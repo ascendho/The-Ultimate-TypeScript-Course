@@ -52,6 +52,8 @@ console.log(result.data?.title);
 
 /* Generic Constraints */
 
+/* The keyof operator */
+
 class Person {
     constructor(public name: string) {
     }
@@ -80,7 +82,18 @@ class Store<T> {
     add(obj: T): void {
         this._objects.push(obj);
     }
+
+    // If T is Product
+    // keyof T => 'name' | 'price'
+
+    find(property: keyof T, value: unknown): T | undefined {
+        return this._objects.find(obj => obj[property] === value);
+    }
 }
+
+let store = new Store<Product>();
+store.add({name: 'a', price: 1, title: 'bread'});
+store.find('name', 'a');
 
 // Pass on the generic type parameter
 
@@ -91,11 +104,11 @@ class CompressibleStore<T> extends Store<T> {
 
 // Restrict the generic type parameter
 
-class SearchableStore<T extends { name: string }> extends Store<T> {
-    find(name: string): T | undefined {
-        return this._objects.find(obj => obj.name === name);
-    }
-}
+// class SearchableStore<T extends { name: string }> extends Store<T> {
+//     override find(name: string): T | undefined {
+//         return this._objects.find(obj => obj.name === name);
+//     }
+// }
 
 // Fix the generic type parameter
 
@@ -104,6 +117,8 @@ class ProductStore extends Store<Product> {
         return [];
     }
 }
+
+
 
 
 
