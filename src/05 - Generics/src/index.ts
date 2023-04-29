@@ -118,11 +118,52 @@ class ProductStore extends Store<Product> {
     }
 }
 
+/* Type Mapping */
 
+interface Goods {
+    name: string;
+    price: number;
+}
 
+type ReadOnly<T> = {
+    // Index signature
+    // keyof
 
+    readonly [Property in keyof T]: T[Property];
+}
 
+type Optional<T> = {
+    [K in keyof T]?: T[K]
+}
 
+type Nullable<T> = {
+    [K in keyof T]: T[K] | null
+}
 
+let goods: ReadOnly<Goods> = {
+    name: 'a',
+    price: 1
+}
 
+/* Exercises */
 
+// 1
+function genericEcho<T>(arg: T): T {
+    return arg;
+}
+
+// 2
+function printName<T extends { name: string }>(obj: T) {
+    console.log(obj.name);
+}
+
+// 3
+
+class Entity<T> {
+    constructor(public id: T) {
+    }
+}
+
+// 4
+
+//It returns a union of the properties of User: ‘userId’ | ‘username
