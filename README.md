@@ -16,7 +16,8 @@ This repo holds code, exercises and summaries from <a href="https://codewithmosh
 - [x] <a href="src/02 - Fundamentals">02 - Fundamentals</a>
 - [x] <a href="src/03 - Advanced Types">03 - Advanced Types</a>
 - [x] <a href="src/04 - Classes, Interfaces and Object-oriented Programming">04 - Classes, Interfaces and Object-oriented Programming</a>
-- [ ] <a href="src/05 - Generics">05 - Generics</a>
+- [x] <a href="src/05 - Generics">05 - Generics</a>
+- [ ] <a href="src/06 - Decorators">06 - Decorators</a>
 
 
 
