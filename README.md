@@ -20,6 +20,7 @@ This repo holds code, exercises and summaries from <a href="https://codewithmosh
 - [x] <a href="src/06 - Decorators">06 - Decorators</a>
 - [x] <a href="src/07 - Modules">07 - Modules</a>
 - [x] <a href="src/08 - Integration with JavaScript">08 - Integration with JavaScript</a>
+- [ ] <a href="src/09 - React with TypeScript">09 - React with TypeScript</a>
 
 
 
