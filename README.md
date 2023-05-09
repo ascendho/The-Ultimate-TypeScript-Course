@@ -21,6 +21,7 @@ This repo holds code, exercises and summaries from <a href="https://codewithmosh
 - [x] <a href="src/07 - Modules">07 - Modules</a>
 - [x] <a href="src/08 - Integration with JavaScript">08 - Integration with JavaScript</a>
 - [x] <a href="src/09 - React with TypeScript">09 - React with TypeScript</a>
+- [ ] <a href="src/10 - Node and Express with TypeScript">10 - Node and Express with TypeScript</a>
 
 
 
